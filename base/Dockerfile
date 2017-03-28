@@ -9,7 +9,7 @@ ARG NODE_VERSION
 ENV NODE_VERSION ${NODE_VERSION:-4.8.0}
 ONBUILD ENV NODE_VERSION ${NODE_VERSION:-4.8.0}
 
-RUN apt-get -y install -y unicode
+RUN apt-get -y install unicode
 RUN bash $METEORD_DIR/lib/install_base.sh
 RUN bash $METEORD_DIR/lib/install_node.sh
 RUN bash $METEORD_DIR/lib/install_phantomjs.sh
